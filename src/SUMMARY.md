@@ -8,5 +8,6 @@
 - [Storage Service](./chapter_6.md)
 - [Pfalfa Token](./chapter_7.md)
 - [Token Allocation](./chapter_7.md)
-- [Project Timeline](./chapter_8.md)
-- [Legal Notice](./chapter_9.md)
+- [Token Stake Pool](./chapter_8.md)
+- [Project Timeline](./chapter_9.md)
+- [Legal Notice](./chapter_10.md)
