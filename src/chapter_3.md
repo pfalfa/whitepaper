@@ -8,7 +8,7 @@ Pfalfa is developed using variety of existing open-source framework specialized 
 
 ## GunDB
 
-## ENS
+## Ethereum Name Service
 
 ## Embark CLI
 
