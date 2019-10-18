@@ -1,18 +1,6 @@
-# Pfalfa Token
+# Pfalfa Gold (PGold)
 
-Pfalfa tokens as crypto assets have two types of values, namely the value of usability or function and the value of scarcity.
+Pfalfa gold as crypto assets is a stable coin (relative to the price of gold) build on top of Pfalfa Blockchain Platform. 1 PGold equal to 1 gram of gold.
 
-Pfalfa token has utility as a token needed to access technology features and services in the Pfalfa ecosystem. For example, DApps developers will need Pfalfa tokens to deploy smart contracts, conduct data transactions, etc. DApps users will need the Pfalfa token to be able to enter and access the application services. The Pfalfa Token issued by users of Pfalfa technology is then accepted by those who maintain the operation of the Pfalfa blockchain as a reward. Greater number of users compared to the number of token sales, will cause more demands for Pfalfa tokens.
+On the Platform Alfa, PGold has utility as an asset needed to access technology features and services in the Pfalfa ecosystem. For example, DApps developers will need PGold to deploy smart contracts, conduct data transactions, etc. DApps users will need the PGold to be able to enter and access the application services. A tiny fraction of total amount of PGold spent by users of Pfalfa ecosystem is then accepted by those who maintain the operation of the Pfalfa blockchain (Miner and Provider) in the form of transaction fee. PGold would become the main medium of exchange for goods and services on Pfalfa Ecosystem. Besides that, public could also use it as a liquid store of value and quick peer to peer cash system. 
 
-The limited supply of Pfalfa tokens of 100,000,000 makes Pfalfa Tokens in the long term have a scarcity value.
-
-## Token Allocation
-
-* Released to Public - 10%
-* Nodes Rewards - 70%
-* Pfalfa team & Advisors - 10%
-* STIFIn Foundation - 10%
-
-> Token allocation for STIFin Foundation and Pfalfa team & Advisors are subject to 2 years lock-up period with maksimum release of 1,000,000 token each per year on years after that 
-
-> Number of nodes is unlimited and difficulty level be adjusted accordingly with an estimation that 100% Pfalfa token will all expected to be released on the market/public at year 2200 
