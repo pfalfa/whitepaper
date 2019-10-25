@@ -30,6 +30,8 @@ Some of Embark’s features, but not all of them, are:
 
 GUN is a small, easy, and fast data sync and storage system that runs everywhere JavaScript does. The aim of GUN is to let you focus on the data that needs to stored, loaded, and shared in your app without worrying about servers, network calls, databases, or tracking offline changes or concurrency conflicts.
 
+GUN is fully decentralized (peer-to-peer or multi-master), meaning that changes are not controlled by a centralized server. A server can be just another peer in the network, one that may have more reliable resources than a browser. You save data on one machine, and it will sync it to other peers without needing a complex consensus protocol. It just works.
+
 ## Ethereum
 
 [From their doc](https://www.ethereum.org/beginners/)
@@ -64,4 +66,4 @@ ENS has similar goals to DNS, the Internet’s Domain Name Service, but has sign
 
 ## Developer Dashboard
 
-Pfalfa provide dashboard for devleoper to manage theid dApps from web-based application, initiating new dApps, setting up database connection, IPFS gateway and setting up ENS domain based either using subdomain inside `pfalfa.eth` or using custom domain.
+Pfalfa provide dashboard for developer to manage theid dApps from web-based application, initiating new dApps, setting up database connection, IPFS gateway and setting up ENS domain based either using subdomain inside `pfalfa.eth` or using custom domain.
