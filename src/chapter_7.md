@@ -6,3 +6,5 @@ On the Platform Alfa, PGold has utility as an asset needed to access technology 
 
 ## Technology
 
+### Blockchain Platform
+

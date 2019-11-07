@@ -1,6 +1,8 @@
 # Core Technology
 
-Pfalfa is developed using variety of existing open-source framework specialized in blockchain and decentralized peer to peer technology. We develop UI dashboard for developer to manage dApps from initializing new dApps, setting up connection to our database service (GunDB) and storage service (IPFS).
+Pfalfa is developed using variety of existing open-source framework specialized in blockchain and decentralized peer to peer technology. We develop UI dashboard for developer to manage dApps from initializing new dApps, setting up connection to our database service (GunDB) and storage service (IPFS) as well.
+
+Backed by Pfalfa Token built on top of Parity Substrate Framework allow us to have decentralized asset exchange marketplace for both developer and end-user
 
 ## GunDB
 
@@ -26,4 +28,4 @@ Despite being "completely generic", it comes with both standards and conventions
 
 ## Developer Dashboard
 
-Pfalfa provide dashboard for developer to manage theid dApps from web-based application, initiating new dApps, setting up database connection, IPFS gateway and setting up ENS domain based either using subdomain inside `pfalfa.eth` or using custom domain.
+Pfalfa provide dashboard for developer to manage theid dApps from web-based application, initiating new dApps, setting up database connection and deploying dApps into our IPFS gateway.

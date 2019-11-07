@@ -4,3 +4,5 @@ Pfalfa provide easy-to-use storage service for dApps on top of IPFS. Pfalfa also
 
 ## Technology
 
+## What is Decentralized storage
+

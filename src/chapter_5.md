@@ -6,3 +6,7 @@ Pfalfa database service has different approach, utilizing [GunDB](https://gun.ec
 
 ## Technology
 
+## What is Decentralized Database
+
+
+
