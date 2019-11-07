@@ -37,3 +37,7 @@ When a browser peer asks for data, it'll merge the reply with its own data using
 > If your server fails, you can still recover your data from the browsers.
 
 This makes the loss of important information nearly impossible, as all copies of the data would need to be destroyed before it is lost.
+
+## GunDB Implementation in Database Service
+
+Pfalfa platform provide dedicated GunDB master peer relay for each dApps. Each peer will be hosted in multiple cloud provider in multiple data center. Once dApps initiated from our Developer Dashboard, our GunDB Peer will automatically provisioning to serve dApps database requirement.

@@ -66,7 +66,7 @@ Simple enough, but what if we want to have a group conversation? Alice creates 4
 
 Once everybody has the same shared key, they can now write and lock a message to the group that only the group can see. Allowing everybody to pass messages around. 
 
-### GunDB SEA API Implemntation in Identity Hub
+## GunDB SEA API Implemntation in Identity Hub
 
 We're using GunDB SEA API as a based in our Identity Hub Services. Pfalfa Platform provide easy to use REST API to connect with our Identity Hub Services which dApps developer can use to manage their user base with simple integration and abstraction.
 
