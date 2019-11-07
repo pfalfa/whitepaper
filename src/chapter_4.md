@@ -65,3 +65,9 @@ This becomes useful when we want to have a private conversation. Alice and Bob e
 Simple enough, but what if we want to have a group conversation? Alice creates 4 copies of an encryption key, which will let everybody in the group both lock and unlock. She now can invite Bob, Carl, and Dave to the group by sending them the key by using their individual padlocks.
 
 Once everybody has the same shared key, they can now write and lock a message to the group that only the group can see. Allowing everybody to pass messages around. 
+
+### GunDB SEA API Implemntation in Identity Hub
+
+We're using GunDB SEA API as a based in our Identity Hub Services. Pfalfa Platform provide easy to use REST API to connect with our Identity Hub Services which dApps developer can use to manage their user base with simple integration and abstraction.
+
+Our Identity Hub Service also provide additional user profile information which can be fetched using public key whenever required. Please consult our Identity Hub Developer Documentation for integration guideline.
