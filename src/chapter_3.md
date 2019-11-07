@@ -6,6 +6,8 @@ Backed by Pfalfa Token built on top of Parity Substrate Framework allow us to ha
 
 ## GunDB
 
+![GunDB](https://camo.githubusercontent.com/36a3253e47dad84b51c325ef5c2b532916a016e1/68747470733a2f2f636c6475702e636f6d2f5445793979476834356c2e737667 "GunDB Logo")
+
 [From their doc](https://gun.eco/docs/Introduction)
 
 GUN is a small, easy, and fast data sync and storage system that runs everywhere JavaScript does. The aim of GUN is to let you focus on the data that needs to stored, loaded, and shared in your app without worrying about servers, network calls, databases, or tracking offline changes or concurrency conflicts.
@@ -16,11 +18,17 @@ GUN is fully decentralized (peer-to-peer or multi-master), meaning that changes 
 
 [From their doc](https://docs.ipfs.io/introduction/)
 
+![IPFS](https://steemitimages.com/p/5ShzsKnKF7vqAUfn3oKdyUKZJrgk43A2Ca64gND96PuSQjo8U4hZ6ZGwHJQDBhUeBGK1zsaYUdGaXK1AnQZnU6nKCvT8L8yVxVxbAHFQas8kvYycRQeyRqkgY5wLpBrbLD61eFcvuuC5V544gKA82wRg?format=match&mode=fit "IPFS Logo")
+
+
+
 IPFS stands for the InterPlanetary File System - a peer-to-peer network for storing and accessing files, websites, applications, and data in a distributed file system
 
 ## Parity Substrate
 
 [From their doc](https://substrate.dev/docs/en/overview/)
+
+![Substrate](https://s3.amazonaws.com/media-p.slid.es/uploads/351278/images/5425886/logo-parity-substrate-4.svg "Substrate Logo")
 
 Substrate is a blockchain platform with a completely generic State Transition Function (STF) and modular components for consensus, networking, and configuration.
 
