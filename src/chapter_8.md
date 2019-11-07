@@ -1,4 +1,7 @@
-# Token Stake Pool
+# Project Timeline
 
-Pfalfa will provide node infrastructure running ethereum node and API for staker to join staking ethereum and earn reward. For providing the service, Pfalfa can charge stakers a predetermined percentage of their interest earned while staking on the node and also there is minimum amount of deposit to allow staker join the pool.
-
+* April 2019 - Initial Launch
+* May to June 2019 - Private sale, Token listing
+* July 2019 to February 2020 - Phase 2 Development
+* March 2020 - Private Launch, Beta testing
+* April 2020 - dApps onboarding

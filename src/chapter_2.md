@@ -7,3 +7,4 @@ The issues with centralized service providers exist and must be handled in a tim
 The focus of the Pfalfa platform is to make a public infrastructure for decentralized applications (DApps). With blockchain and decentralized technology, Pfalfa technology can store and access decentralized data with a very high level of security. In addition, with the peer to peer mechanism, network connectivity can occur either offline and online with smart synchronization.
 
 Pfalfa Platform offers a range of infrastructure capability services including decentralized storage, database, and identity, which can be extended indefinitely
+
