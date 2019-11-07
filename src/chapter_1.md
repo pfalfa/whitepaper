@@ -1,3 +1,6 @@
+
+![Pfalfa](https://dev.my.id/pfalfa-wp/logo.jpg "Pfalfa Logo")
+
 # Abstract
 
 Although the cloud industry seems very mature with big players like AWS, Azure, and Google Cloud their cloud infrastructure still revolve centralized applications with major resources are running in huge centralized data centers. Such platforms are hardly suitable for building decentralized peer-to-peer applications. Also, there is hardly a cost-effective solution for payment flow of micro-transactions.
