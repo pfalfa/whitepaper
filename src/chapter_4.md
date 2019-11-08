@@ -1,6 +1,6 @@
 # Identity Hub Service
 
-Pfalfa Identity served as decentralized identity hub inside Pfalfa Platform. It's based on decentralized, peer to peer with public/private key cryptography [GunDB SEA API](https://gun.eco/docs/SEA)
+Pfalfa Identity Hub served as decentralized identity hub inside Pfalfa Platform. It's based on decentralized, peer to peer with public/private key cryptography [GunDB SEA API](https://gun.eco/docs/SEA)
 
 It feature similar to what centralized services offer such as Facebook Login but with fundamentally difference on the backend since Pfalfa will not store password/private key in the server nor transport between server. The private key of user will be kept on the user device.
 
@@ -66,8 +66,8 @@ Simple enough, but what if we want to have a group conversation? Alice creates 4
 
 Once everybody has the same shared key, they can now write and lock a message to the group that only the group can see. Allowing everybody to pass messages around. 
 
-## GunDB SEA API Implemntation in Identity Hub
+## GunDB SEA API Implementation in Pfalfa Identity Hub Service
 
-We're using GunDB SEA API as a based in our Identity Hub Services. Pfalfa Platform provide easy to use REST API to connect with our Identity Hub Services which dApps developer can use to manage their user base with simple integration and abstraction.
+> We're using GunDB SEA API as a based in our Identity Hub Services. Pfalfa Platform provide easy to use REST API to connect with our Identity Hub Services which dApps developer can use to manage their user base with simple integration and abstraction.
 
-Our Identity Hub Service also provide additional user profile information which can be fetched using public key whenever required. Please consult our Identity Hub Developer Documentation for integration guideline.
+> Our Identity Hub Service also provide additional user profile information which can be fetched using public key whenever required. Please consult our Identity Hub Developer Documentation for integration guideline.

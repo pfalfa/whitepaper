@@ -4,7 +4,7 @@ Pfalfa is developed using variety of existing open-source framework specialized 
 
 Backed by Pfalfa Token built on top of Parity Substrate Framework allow us to have decentralized asset exchange marketplace for both developer and end-user
 
-## GunDB
+### GunDB
 
 ![GunDB](https://camo.githubusercontent.com/36a3253e47dad84b51c325ef5c2b532916a016e1/68747470733a2f2f636c6475702e636f6d2f5445793979476834356c2e737667 "GunDB Logo")
 
@@ -14,7 +14,7 @@ GUN is a small, easy, and fast data sync and storage system that runs everywhere
 
 GUN is fully decentralized (peer-to-peer or multi-master), meaning that changes are not controlled by a centralized server. A server can be just another peer in the network, one that may have more reliable resources than a browser. You save data on one machine, and it will sync it to other peers without needing a complex consensus protocol. It just works.
 
-## IPFS
+### IPFS
 
 [From their doc](https://docs.ipfs.io/introduction/)
 
@@ -24,7 +24,7 @@ GUN is fully decentralized (peer-to-peer or multi-master), meaning that changes 
 
 IPFS stands for the InterPlanetary File System - a peer-to-peer network for storing and accessing files, websites, applications, and data in a distributed file system
 
-## Parity Substrate
+### Parity Substrate
 
 [From their doc](https://substrate.dev/docs/en/overview/)
 
@@ -34,6 +34,14 @@ Substrate is a blockchain platform with a completely generic State Transition Fu
 
 Despite being "completely generic", it comes with both standards and conventions - particularly with the Substrate Runtime Module Library (SRML) - regarding the underlying data-structures that power the STF, thereby making rapid blockchain development a reality.
 
-## Developer Dashboard
+## Pfalfa Platform 
 
-Pfalfa provide dashboard for developer to manage theid dApps from web-based application, initiating new dApps, setting up database connection and deploying dApps into our IPFS gateway.
+Pfalfa consist of both Developer Dashboard where developer manage their own dApps and dApps Store where end user can browse any dApps inside Pfalfa Platform.
+
+### Developer Dashboard
+
+Once developer register and login, they can start initiate new dApps, connect to our database relay peer and start deploying dApps intou our IPFS Gateway using provided CLI Tools. Each dApps will have it's own relay peer hence not interfere with other dApps.
+
+### dApps Store
+
+Once dApps published, it will automatically available for user to browse and use the dApps, optionally it can be integrate with our Identity Hub or doing transaction inside dApps using Pfalfa Gold token. There will be small transaction for each transaction occured in the platform. 

@@ -55,4 +55,4 @@ In today's web, if a file is moved, all links to that file need to be updated if
 
 ## IPFS Implementation in Storage Service
 
-Pfalfa Platform will manage multiple IPFS gateway using IPFS cluster to maximize data redundancy anda availability to already decentralized storage accross IPFS. Using our CLI tool, developer can easily deploy dApps to our IPFS gateway which automatically pin and publish under IPNS. We also provide sub-domain to link between IPFS CID and your dApps domain. Please consult our Developer Documentation for more information.
+> Pfalfa Platform will manage multiple IPFS gateway using IPFS cluster to maximize data redundancy anda availability to already decentralized storage accross IPFS. Using our CLI tool, developer can easily deploy dApps to our IPFS gateway which automatically pin and publish under IPNS. We also provide sub-domain to link between IPFS CID and your dApps domain. Please consult our Developer Documentation for more information.
