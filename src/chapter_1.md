@@ -7,6 +7,6 @@ These issues also exist for platforms dealing with complex multi-party integrati
 
 The good news is that Blockchain has emerged as a new disruptive tool to tackle these issues, ushering in a new era of huge technological advancements. It is democratizing the internet and leveling the business field for consumers and business to operate in a progressively global marketplace.
 
-![Pfalfa](https://dev.my.id/pfalfa-wp/logo.jpg "Pfalfa Logo")
+![Pfalfa](https://pfalfa.io/image/logo-pfalfa-small.png "Pfalfa Logo")
 
 > Pfalfa will democratize this field for cloud infrastructure as well as open-up the market for resource providers and application developers to run and deploy their decentralized applications in a cost-effective way. We are building a decentralized peer-to-peer platform for developer to build decentralized application easily using existing blockchain technology backed by Pfalfa Gold Stablecoin.
