@@ -6,6 +6,6 @@
 - [Identity Hub Service](./chapter_4.md)
 - [Database Service](./chapter_5.md)
 - [Storage Service](./chapter_6.md)
-- [Pfalfa Gold](./chapter_7.md)
+- [Alfa Gold](./chapter_7.md)
 - [Project Timeline](./chapter_8.md)
 - [Legal Notice](./chapter_9.md)
