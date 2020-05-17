@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Identity Hub Service - Pfalfa Whitepaper</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Abstract</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Market Opportunity</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Technology</a></li><li class="chapter-item expanded "><a href="chapter_4.html" class="active"><strong aria-hidden="true">4.</strong> Identity Hub Service</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Database Service</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Storage Service</a></li><li class="chapter-item expanded "><a href="chapter_7.html"><strong aria-hidden="true">7.</strong> Alfa Gold</a></li><li class="chapter-item expanded "><a href="chapter_8.html"><strong aria-hidden="true">8.</strong> Project Timeline</a></li><li class="chapter-item expanded "><a href="chapter_9.html"><strong aria-hidden="true">9.</strong> Legal Notice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Pfalfa Whitepaper</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#identity-hub-service" id="identity-hub-service">Identity Hub Service</a></h1>
+<p>Pfalfa Identity Hub served as decentralized identity hub inside Pfalfa Platform. It's based on decentralized, peer to peer with public/private key cryptography <a href="https://gun.eco/docs/SEA">GunDB SEA API</a></p>
+<p>It feature similar to what centralized services offer such as Facebook Login but with fundamentally difference on the backend since Pfalfa will not store password/private key in the server nor transport between server. The private key of user will be kept on the user device.</p>
+<p>Pfalfa Identity Hub Service can be used all across the platform for developer to integrate using API, as well as end-user who'd like to use any of dApps under Pfalfa Platform.</p>
+<h2><a class="header" href="#technology" id="technology">Technology</a></h2>
+<h3><a class="header" href="#what-is-decentralized-identity" id="what-is-decentralized-identity">What is Decentralized Identity</a></h3>
+<blockquote>
+<p>Identity is one of the most vital pieces when it comes to the management of user-specific information. With identity theft turning into a major concern nowadays, there is a need to ensure that identity of a human or a machine is self-sovereign and hack-proof. Owning to a huge amount of data associated with identities, there is also a need to ensure that the systems handling identity-related data are capable of handling high scale. That is where Pfalfa comes in as a natural fit for solving identity-related issues because of its combined characteristics of blockchain and database.</p>
+</blockquote>
+<p>A key piece to decentralized identity is how people, devices, and other entities in the world are identified without a centrally owned registry. Decentralized identity re-envisions the way people share access, control, and share their personal information. It gives people power back over their identity.</p>
+<h3><a class="header" href="#how-it-work" id="how-it-work">How it Work</a></h3>
+<p>To create a new user account, it first generate a public/private key pair. then it add the ability to login to the account by hashing the password and a salt with PBKDF2. This produces a proof of work that is used to encrypt and decrypt the private key with AES.</p>
+<p>Once we have the private key, it can then read and write our own personal data using the private key as an AES encryption key. We can also have private conversations with others by sending them our public key padlock.</p>
+<p>Finally, we can prove to others we said something by adding a digital signature to our published content, which the public key can then verify.</p>
+<h3><a class="header" href="#data-security" id="data-security">Data Security</a></h3>
+<p>Most websites you use today have fake security. When you log onto their service, your password gets sent up to their proprietary servers. There they check to see if it is correct and grant you access to YOUR data.</p>
+<p>Sure, their servers might be in a top secret location. But the problem is that they know your password. Which means any bad actor, like a rogue employee, a hacker, or a government agency can snoop on your data without you knowing.</p>
+<p>So what does real security look like?</p>
+<p>Rather than your password getting broadcast over the internet, you instead get sent a bullet proof vault that you try to open. If your password is correct, the vault unlocks. But if you are a hacker, it would take a 100 years to crack open - and you would have to do this for EVERY piece of data sent to you.</p>
+<p>This makes it very hard for bad actors to spy on you because your password never leaves your computer.</p>
+<h3><a class="header" href="#cryptography" id="cryptography">Cryptography</a></h3>
+<p>The most important piece is first creating user accounts. Unfortunately, a username/password combo is not very secure. We need something better.</p>
+<p>During the Cold War a new type of security was invented. It is similar to a username/password, but imagine instead having to memorize the first thousand digits of PI! Having a password that long would take a hacker one hundred years to break. This is why it is secure and it is called public/private key cryptography.</p>
+<p>However, your users would probably get really confused with that. So how can we let them keep their own password... but still have real security? Well, we take their normal password and mix with other information. The end result is long and complicated, creating a secure account for our users to sign into.</p>
+<h3><a class="header" href="#proof-of-work" id="proof-of-work">Proof of Work</a></h3>
+<p>It might be easy for you to guess what the other ingredients are. But you would still have to bake a pie for each guess. That is a lot of extra work. And that is exactly why mixing our password with some salt* keeps our account secure. This recipe is called Password Based Key Derivation Function number Two or PBKDF2 for short.</p>
+<p>If you know the password, it is easy to bake the same pie again and again. If you don't know the password, guessing is easy, but baking is hard. This idea is called &quot;proof of work&quot; and is important for creating and signing into a user account.</p>
+<h3><a class="header" href="#encryption" id="encryption">Encryption</a></h3>
+<p>So far, we created a user account with public/private key cryptography. This way, it is secure, unlike passwords. We then used PBKDF2 to extend the user's password into a &quot;proof of work&quot;. That way, if a hacker tries to guess the password, they have to do hours of extra work for every guess.</p>
+<p>Now, we use the proof of work to decrypt the private key. This private key is used to lock and unlock our private data, in the same way you lock your house or car to stop other people from getting at your stuff. But, how does a lock work?</p>
+<p>Encryption is the same thing, it rotates each letter by a different distance, thus scrambling the message. You can only unscramble the message if you have a key that perfectly restores every letter in the message. This is called Advanced Encryption Standard, or AES for short.</p>
+<h3><a class="header" href="#public-private-key" id="public-private-key">Public Private Key</a></h3>
+<p>It is easy to confuse encryption keys and public/private keys. One is like a door knob, you need a key to both lock and unlock it. While public/private keys are like a padlock, the public key can close the lock but only the private key can open it.</p>
+<p>This becomes useful when we want to have a private conversation. Alice and Bob exchange padlocks. Now Alice can write a message that only Bob can open. When Bob replies to Alice, he uses her padlock so only she can open his message.</p>
+<p>Simple enough, but what if we want to have a group conversation? Alice creates 4 copies of an encryption key, which will let everybody in the group both lock and unlock. She now can invite Bob, Carl, and Dave to the group by sending them the key by using their individual padlocks.</p>
+<p>Once everybody has the same shared key, they can now write and lock a message to the group that only the group can see. Allowing everybody to pass messages around. </p>
+<h2><a class="header" href="#gundb-sea-api-implementation-in-pfalfa-identity-hub-service" id="gundb-sea-api-implementation-in-pfalfa-identity-hub-service">GunDB SEA API Implementation in Pfalfa Identity Hub Service</a></h2>
+<blockquote>
+<p>We're using GunDB SEA API as a based in our Identity Hub Services. Pfalfa Platform provide easy to use REST API to connect with our Identity Hub Services which dApps developer can use to manage their user base with simple integration and abstraction.</p>
+</blockquote>
+<blockquote>
+<p>Our Identity Hub Service also provide additional user profile information which can be fetched using public key whenever required. Please consult our Identity Hub Developer Documentation for integration guideline.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="chapter_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="chapter_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="chapter_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

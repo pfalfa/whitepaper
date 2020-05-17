@@ -1,0 +1,525 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pfalfa Whitepaper</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Abstract</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Market Opportunity</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Technology</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Identity Hub Service</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Database Service</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Storage Service</a></li><li class="chapter-item expanded "><a href="chapter_7.html"><strong aria-hidden="true">7.</strong> Alfa Gold</a></li><li class="chapter-item expanded "><a href="chapter_8.html"><strong aria-hidden="true">8.</strong> Project Timeline</a></li><li class="chapter-item expanded "><a href="chapter_9.html"><strong aria-hidden="true">9.</strong> Legal Notice</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Pfalfa Whitepaper</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#abstract" id="abstract">Abstract</a></h1>
+<p>Although the cloud industry seems very mature with big players like AWS, Azure, and Google Cloud their cloud infrastructure still revolve centralized applications with major resources are running in huge centralized data centers. Such platforms are hardly suitable for building decentralized peer-to-peer applications. Also, there is hardly a cost-effective solution for payment flow of micro-transactions.</p>
+<p>These issues also exist for platforms dealing with complex multi-party integration across different organizations such as in supply chains, government agencies, and financial institutions. Existing systems depend greatly on high-cost intermediaries and proprietary interfaces that are often very expensive to build and maintain. This makes it challenging for smaller companies to enter into the market.</p>
+<p>The good news is that Blockchain has emerged as a new disruptive tool to tackle these issues, ushering in a new era of huge technological advancements. It is democratizing the internet and leveling the business field for consumers and business to operate in a progressively global marketplace.</p>
+<p><img src="https://pfalfa.io/image/logo-pfalfa-small.png" alt="Pfalfa" title="Pfalfa Logo" /></p>
+<blockquote>
+<p>Pfalfa will democratize this field for cloud infrastructure as well as open-up the market for resource providers and application developers to run and deploy their decentralized applications in a cost-effective way. We are building a decentralized peer-to-peer platform for developer to build decentralized application easily using existing blockchain technology backed by Pfalfa Gold Stablecoin.</p>
+</blockquote>
+<h1><a class="header" href="#market-opportunity" id="market-opportunity">Market Opportunity</a></h1>
+<h3><a class="header" href="#data-growth-and-underutilization" id="data-growth-and-underutilization">Data Growth and Underutilization</a></h3>
+<p>Global data creation is expanding at an exponential frequency. With the advancement in data-driven technology, the percentage of usable data is also expanding. A number of exisitng data services solutions are behind; therefore, there is a huge opportunity for innovation in the market.</p>
+<p>With the total projected annual data creation estimated to reach 163 trillion gigabytes (163 ZB) by 2025, data services companies are now struggling to figure out how to scale their capacity to fit in the increasing modern demands <sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<h3><a class="header" href="#usable-data-not-used" id="usable-data-not-used">Usable Data Not Used</a></h3>
+<p><img src="https://dev.my.id/pfalfa-wp/market-1.png" alt="Usable data not used" title="usable data not used" /></p>
+<p>Usable data is growing in parallel to the total data creation at a 31% rate every year . With businesses going for more storage capacity, they are yet to figure out how to fully optimize utilization, creating an accumulation of underutilized capacity and wasted usable data. </p>
+<p>Owing to the difficulties involved with scaling centralized data service systems, less than 50% of purchased capacity is used at any particular time. What this means is that of all the data storage capacity in the market, more than half of it is just dormant. </p>
+<h3><a class="header" href="#data-center-storage-utilization" id="data-center-storage-utilization">Data Center Storage Utilization</a></h3>
+<p><img src="https://dev.my.id/pfalfa-wp/market-2.png" alt="Data Center Storage Utilization" title="Data Center Storage Utilization" /></p>
+<p>Without doubt, data growth is swift, there is a need to provide a secure and efficient way to optimize storage utilization.</p>
+<h3><a class="header" href="#data-security" id="data-security">Data Security</a></h3>
+<p>The increase in usable data demands a greater need for data security, as demonstrated by recent high profile data leaks from the likes of Dropbox (68 million users affected <sup class="footnote-reference"><a href="#2">2</a></sup>) , Equifax (145.5 million users affected <sup class="footnote-reference"><a href="#3">3</a></sup>) , Facebook (50 million users affected <sup class="footnote-reference"><a href="#4">4</a></sup>) , and Yahoo (3 billion users affected <sup class="footnote-reference"><a href="#5">5</a></sup>) .</p>
+<p>In any centralized data services solution, a service provider controls their customers’ sensitive data. If security measures are below average and a company becomes a victim to a data breach, such as company can face financial ruin and the service provider can face serious legal consequences. Based on a research done by Cisco, at least a business becomes a victim to a ransomware attack within every 40 seconds. In addition, almost a quarter of the businesses that undergo an attack tend to lose business opportunities, one in five experience the loss of customers, and approximately 30 percent experience the loss of revenue <sup class="footnote-reference"><a href="#6">6</a></sup> .  Companies handling sensitive and proprietary data are constantly focused on achieving maximum security.</p>
+<p>Companies presently take a reactive tactic to fight targeted attacks, instead of building a proactive solution. A reactive tactic entails meticulous monitoring, which demands expensive technology and human capital. In spite of a company’s efforts, there is usually the likelihood of human error. In addition, service providers have structured their privacy policies in a way that they can search non-encrypted files as well as share personal data legally. This alone generates another obvious vulnerability to data breaches, as specified by the European Union’s General Data Protection Regulation <sup class="footnote-reference"><a href="#7">7</a></sup>.</p>
+<p>Inadequate security is costly. In 2018, more than 16 top companies, which include Delta and Whole Foods, experienced costly data breaches, and in fact, the raw count of popular data breaches has increased on a yearly basis since 2015 <sup class="footnote-reference"><a href="#8">8</a></sup> .  Cybercrime damage is assessed to cost around $6 trillion yearly by 2021, up from the $3 trillion of 2015. Cost of cybersecurity is estimated to be more than $1 trillion cumulatively from 2017 to 2021 <sup class="footnote-reference"><a href="#9">9</a></sup>.</p>
+<h3><a class="header" href="#data-accessibility" id="data-accessibility">Data Accessibility</a></h3>
+<p>When customers store data with a big service provider, they are believing that their data will be readily accessible at a fast rate; this means customers want both availability and speed.</p>
+<p>Minor outages at data centers seem to be a regular thing. At worst, a 3 to 6-day outage at a foremost cloud provider would cost around $15 billion <sup class="footnote-reference"><a href="#10">10</a></sup>. Yet, in 2017, 75% of small businesses in the U.S. has no cyber insurance, aggravating the losses suffered during times of data center outages <sup class="footnote-reference"><a href="#11">11</a></sup>.</p>
+<p>Enterprises want to have speedy access to their data at always, even if data sizes are huge. For enterprises with precise accessibility demands, public cloud is not really an optimal solution. With public cloud, enterprises pay a premium so as to have constantly high levels of CPU, high bandwidth, and low latency. This premium is often why enterprises choose to build on-premise infrastructure. With the flexibility within a permission-based market, enterprise customers can find service providers that meet their needs, including the need for availability and speed.</p>
+<h3><a class="header" href="#overhead" id="overhead">Overhead</a></h3>
+<p>With the increase in the need for data storage, businesses are becoming concerned with the rising costs. For enterprises (companies with over 1,000 employees), 26% claim to have spent more than $6 million per annum on cloud storage and another 26% claim to have spent between $1.2 million and $6 million per annum on cloud storage. An estimate of 76% of users regard managing cloud spend as an issue, and an estimate of 35% of cloud spend is wasted <sup class="footnote-reference"><a href="#12">12</a></sup>.</p>
+<p>Although the out-of-the-box solutions may be efficient for public cloud, most enterprise applications demand customizable data services. This existing gap is usually filled by private cloud, on-premise solutions, or any hybrid, all of which demand incremental support as well as backup, thereby increasing overhead. This challenge can be tackled through a data services solution that is both flexible and secure enough to satisfy the individual needs of customers regarding their sensitive data.</p>
+<h3><a class="header" href="#market-size" id="market-size">Market Size</a></h3>
+<p>The data storage industry itself is huge; the enterprise storage market is on track to make more than $89 billion in revenue by 2022 with growth rates rising above 30% yearly <sup class="footnote-reference"><a href="#13">13</a></sup>.  Around the same period, the public cloud market is estimated to get to $300 billion in annual spend. As the amount of data increases, sectors into data storage will become more valuable. For instance, disaster recovery as a service is projected to rise from $2.19 billion in 2017 to $12.5 billion by 2022. Likewise, the hyper-converged infrastructure market is estimated to reach $12.6 billion by 2022 with a CAGR of 43.59%. Furthermore, the data colocation market is projected to get to $63 billion in the next five years <sup class="footnote-reference"><a href="#14">14</a></sup>.</p>
+<p>The Pfalfa platform is open to all of the data service verticals while also operating as a sharing economy. The cumulative sharing economy is projected to reach $40 billion by 2022 <sup class="footnote-reference"><a href="#15">15</a></sup>. This shows that it is an economy that demands our attention.</p>
+<h3><a class="header" href="#the-future-of-data-services" id="the-future-of-data-services">The Future of Data Services</a></h3>
+<p>Centralized cloud services are autocracies, and certain highly decentralized cloud services are pure democracies. Pfalfa, however, intends to be different like a republic of its own. While the autocracies are efficient in certain ways, they also can be fragile. No matter how large the cloud providers are, they can be brought down by power outages, bugs, or any security breaches. In comparison, while pure democracies work towards being a solution to fragility, they tend to prove incapable. </p>
+<p>The issues with centralized service providers exist and must be handled in a timely and effective manner. Pfalfa is introducing with a solution, which leverages blockchain technology to provide security while maintaining the high-quality service expected within centralized systems. In doing so, Pfalfa is combining the strengths of traditional enterprise-grade hardware and software alongside the security guarantees of the blockchain. 
+As industries continue to depend on data, the data services market will continue to grow in both size and significance.</p>
+<h2><a class="header" href="#pfalfa-solution" id="pfalfa-solution">Pfalfa Solution</a></h2>
+<p>Centralized cloud services are autocracies, and certain highly decentralized cloud services are pure democracies. Pfalfa, however, intends to be different like a republic of its own. While the autocracies are efficient in certain ways, they also can be fragile. No matter how large the cloud providers are, they can be brought down by power outages, bugs, or any security breaches. In comparison, while pure democracies work towards being a solution to fragility, they tend to prove incapable.</p>
+<p>The issues with centralized service providers exist and must be handled in a timely and effective manner. Pfalfa is introducing with a solution, which leverages blockchain and decentralized technology to provide security while maintaining the high-quality service expected within centralized systems.</p>
+<p>The focus of the Pfalfa platform is to make a public infrastructure for decentralized applications (DApps). With blockchain and decentralized technology, Pfalfa technology can store and access decentralized data with a very high level of security. In addition, with the peer to peer mechanism, network connectivity can occur either offline and online with smart synchronization.</p>
+<p>Pfalfa Platform offers a range of infrastructure capability services including decentralized storage, database, and identity, which can be extended indefinitely.</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>https://www.seagate.com/news/news-archive/seagate-advises-global-business-leaders-andentrepreneurs-pr-master/</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>https://www.bbc.com/news/technology-37232635</p>
+</div>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p>https://www.usatoday.com/story/money/personalfinance/2018/03/01/equifax-finds-additional-2-4-millionamericans-impacted-2017-breach/384381002/</p>
+</div>
+<div class="footnote-definition" id="4"><sup class="footnote-definition-label">4</sup>
+<p>https://www.nytimes.com/2018/09/28/technology/facebook-hack-data-breach.html</p>
+</div>
+<div class="footnote-definition" id="5"><sup class="footnote-definition-label">5</sup>
+<p>https://www.reuters.com/article/us-yahoo-cyber/yahoo-says-all-three-billion-accounts-hacked-in-2013data-theft-idUSKCN1C82O1</p>
+</div>
+<div class="footnote-definition" id="6"><sup class="footnote-definition-label">6</sup>
+<p>The Cisco 2017 Security Capabilities Benchmark Studys</p>
+</div>
+<div class="footnote-definition" id="7"><sup class="footnote-definition-label">7</sup>
+<p>https://eugdpr.org/</p>
+</div>
+<div class="footnote-definition" id="8"><sup class="footnote-definition-label">8</sup>
+<p>https://www.businessinsider.com/data-breaches-2018-4#whole-foods-14</p>
+</div>
+<div class="footnote-definition" id="9"><sup class="footnote-definition-label">9</sup>
+<p>https://1c7fab3im83f5gqiow2qqs2k-wpengine.netdna-ssl.com/2015-wp/wpcontent/uploads/2017/10/2017-Cybercrime-Report.pdf</p>
+</div>
+<div class="footnote-definition" id="10"><sup class="footnote-definition-label">10</sup>
+<p>https://www.zdnet.com/article/cloud-computing-heres-how-much-a-huge-outage-could-cost-you/</p>
+</div>
+<div class="footnote-definition" id="11"><sup class="footnote-definition-label">11</sup>
+<p>https://smallbiztrends.com/2016/07/cyber-risk-insurance-small-business.html</p>
+</div>
+<div class="footnote-definition" id="12"><sup class="footnote-definition-label">12</sup>
+<p>The RightScale 2018 State of the Cloud Report</p>
+</div>
+<div class="footnote-definition" id="13"><sup class="footnote-definition-label">13</sup>
+<p>https://www.idc.com/getdoc.jsp?containerId=prUS43964118</p>
+</div>
+<div class="footnote-definition" id="14"><sup class="footnote-definition-label">14</sup>
+<p>https://www.gartner.com/newsroom/id/3871416, https://www.idc.com/getdoc.jsp?containerId=prUS43964118, 
+https://www.marketsandmarkets.com/PressReleases/recovery-as-a-service.asp, https://www.marketsandmarkets.com/PressReleases/hyper-converged-infrastructure.asp, https://www.marketsandmarkets.com/PressReleases/cloud-storage.asp  https://www.marketsandmarkets.com/PressReleases/colocation.asp</p>
+</div>
+<div class="footnote-definition" id="15"><sup class="footnote-definition-label">15</sup>
+<p>https://www.juniperresearch.com/press/press-releases/sharing-economy-revenues-to-double-by-2022</p>
+</div>
+<h1><a class="header" href="#core-technology" id="core-technology">Core Technology</a></h1>
+<p>Pfalfa is developed using variety of existing open-source framework specialized in blockchain and decentralized peer to peer technology. We develop UI dashboard for developer to manage dApps from initializing new dApps, setting up connection to our database service (GunDB) and storage service (IPFS) as well.</p>
+<p>Backed by Pfalfa Token built on top of Parity Substrate Framework allow us to have decentralized asset exchange marketplace for both developer and end-user</p>
+<h3><a class="header" href="#gundb" id="gundb">GunDB</a></h3>
+<p><img src="https://camo.githubusercontent.com/36a3253e47dad84b51c325ef5c2b532916a016e1/68747470733a2f2f636c6475702e636f6d2f5445793979476834356c2e737667" alt="GunDB" title="GunDB Logo" /></p>
+<p><a href="https://gun.eco/docs/Introduction">From their doc</a></p>
+<p>GUN is a small, easy, and fast data sync and storage system that runs everywhere JavaScript does. The aim of GUN is to let you focus on the data that needs to stored, loaded, and shared in your app without worrying about servers, network calls, databases, or tracking offline changes or concurrency conflicts.</p>
+<p>GUN is fully decentralized (peer-to-peer or multi-master), meaning that changes are not controlled by a centralized server. A server can be just another peer in the network, one that may have more reliable resources than a browser. You save data on one machine, and it will sync it to other peers without needing a complex consensus protocol. It just works.</p>
+<h3><a class="header" href="#ipfs" id="ipfs">IPFS</a></h3>
+<p><a href="https://docs.ipfs.io/introduction/">From their doc</a></p>
+<p><img src="https://steemitimages.com/p/5ShzsKnKF7vqAUfn3oKdyUKZJrgk43A2Ca64gND96PuSQjo8U4hZ6ZGwHJQDBhUeBGK1zsaYUdGaXK1AnQZnU6nKCvT8L8yVxVxbAHFQas8kvYycRQeyRqkgY5wLpBrbLD61eFcvuuC5V544gKA82wRg?format=match&amp;mode=fit" alt="IPFS" title="IPFS Logo" /></p>
+<p>IPFS stands for the InterPlanetary File System - a peer-to-peer network for storing and accessing files, websites, applications, and data in a distributed file system</p>
+<h3><a class="header" href="#parity-substrate" id="parity-substrate">Parity Substrate</a></h3>
+<p><a href="https://substrate.dev/docs/en/overview/">From their doc</a></p>
+<p><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/351278/images/5425886/logo-parity-substrate-4.svg" alt="Substrate" title="Substrate Logo" /></p>
+<p>Substrate is a blockchain platform with a completely generic State Transition Function (STF) and modular components for consensus, networking, and configuration.</p>
+<p>Despite being &quot;completely generic&quot;, it comes with both standards and conventions - particularly with the Substrate Runtime Module Library (SRML) - regarding the underlying data-structures that power the STF, thereby making rapid blockchain development a reality.</p>
+<h2><a class="header" href="#pfalfa-platform" id="pfalfa-platform">Pfalfa Platform</a></h2>
+<p>Pfalfa consist of both Developer Dashboard where developer manage their own dApps and dApps Store where end user can browse any dApps inside Pfalfa Platform.</p>
+<h3><a class="header" href="#developer-dashboard" id="developer-dashboard">Developer Dashboard</a></h3>
+<p>Once developer register and login, they can start initiate new dApps, connect to our database relay peer and start deploying dApps intou our IPFS Gateway using provided CLI Tools. Each dApps will have it's own relay peer hence not interfere with other dApps.</p>
+<h3><a class="header" href="#dapps-store" id="dapps-store">dApps Store</a></h3>
+<p>Once dApps published, it will automatically available for user to browse and use the dApps, optionally it can be integrate with our Identity Hub or doing transaction inside dApps using Pfalfa Gold token. There will be small transaction for each transaction occured in the platform. </p>
+<h1><a class="header" href="#identity-hub-service" id="identity-hub-service">Identity Hub Service</a></h1>
+<p>Pfalfa Identity Hub served as decentralized identity hub inside Pfalfa Platform. It's based on decentralized, peer to peer with public/private key cryptography <a href="https://gun.eco/docs/SEA">GunDB SEA API</a></p>
+<p>It feature similar to what centralized services offer such as Facebook Login but with fundamentally difference on the backend since Pfalfa will not store password/private key in the server nor transport between server. The private key of user will be kept on the user device.</p>
+<p>Pfalfa Identity Hub Service can be used all across the platform for developer to integrate using API, as well as end-user who'd like to use any of dApps under Pfalfa Platform.</p>
+<h2><a class="header" href="#technology" id="technology">Technology</a></h2>
+<h3><a class="header" href="#what-is-decentralized-identity" id="what-is-decentralized-identity">What is Decentralized Identity</a></h3>
+<blockquote>
+<p>Identity is one of the most vital pieces when it comes to the management of user-specific information. With identity theft turning into a major concern nowadays, there is a need to ensure that identity of a human or a machine is self-sovereign and hack-proof. Owning to a huge amount of data associated with identities, there is also a need to ensure that the systems handling identity-related data are capable of handling high scale. That is where Pfalfa comes in as a natural fit for solving identity-related issues because of its combined characteristics of blockchain and database.</p>
+</blockquote>
+<p>A key piece to decentralized identity is how people, devices, and other entities in the world are identified without a centrally owned registry. Decentralized identity re-envisions the way people share access, control, and share their personal information. It gives people power back over their identity.</p>
+<h3><a class="header" href="#how-it-work" id="how-it-work">How it Work</a></h3>
+<p>To create a new user account, it first generate a public/private key pair. then it add the ability to login to the account by hashing the password and a salt with PBKDF2. This produces a proof of work that is used to encrypt and decrypt the private key with AES.</p>
+<p>Once we have the private key, it can then read and write our own personal data using the private key as an AES encryption key. We can also have private conversations with others by sending them our public key padlock.</p>
+<p>Finally, we can prove to others we said something by adding a digital signature to our published content, which the public key can then verify.</p>
+<h3><a class="header" href="#data-security-1" id="data-security-1">Data Security</a></h3>
+<p>Most websites you use today have fake security. When you log onto their service, your password gets sent up to their proprietary servers. There they check to see if it is correct and grant you access to YOUR data.</p>
+<p>Sure, their servers might be in a top secret location. But the problem is that they know your password. Which means any bad actor, like a rogue employee, a hacker, or a government agency can snoop on your data without you knowing.</p>
+<p>So what does real security look like?</p>
+<p>Rather than your password getting broadcast over the internet, you instead get sent a bullet proof vault that you try to open. If your password is correct, the vault unlocks. But if you are a hacker, it would take a 100 years to crack open - and you would have to do this for EVERY piece of data sent to you.</p>
+<p>This makes it very hard for bad actors to spy on you because your password never leaves your computer.</p>
+<h3><a class="header" href="#cryptography" id="cryptography">Cryptography</a></h3>
+<p>The most important piece is first creating user accounts. Unfortunately, a username/password combo is not very secure. We need something better.</p>
+<p>During the Cold War a new type of security was invented. It is similar to a username/password, but imagine instead having to memorize the first thousand digits of PI! Having a password that long would take a hacker one hundred years to break. This is why it is secure and it is called public/private key cryptography.</p>
+<p>However, your users would probably get really confused with that. So how can we let them keep their own password... but still have real security? Well, we take their normal password and mix with other information. The end result is long and complicated, creating a secure account for our users to sign into.</p>
+<h3><a class="header" href="#proof-of-work" id="proof-of-work">Proof of Work</a></h3>
+<p>It might be easy for you to guess what the other ingredients are. But you would still have to bake a pie for each guess. That is a lot of extra work. And that is exactly why mixing our password with some salt* keeps our account secure. This recipe is called Password Based Key Derivation Function number Two or PBKDF2 for short.</p>
+<p>If you know the password, it is easy to bake the same pie again and again. If you don't know the password, guessing is easy, but baking is hard. This idea is called &quot;proof of work&quot; and is important for creating and signing into a user account.</p>
+<h3><a class="header" href="#encryption" id="encryption">Encryption</a></h3>
+<p>So far, we created a user account with public/private key cryptography. This way, it is secure, unlike passwords. We then used PBKDF2 to extend the user's password into a &quot;proof of work&quot;. That way, if a hacker tries to guess the password, they have to do hours of extra work for every guess.</p>
+<p>Now, we use the proof of work to decrypt the private key. This private key is used to lock and unlock our private data, in the same way you lock your house or car to stop other people from getting at your stuff. But, how does a lock work?</p>
+<p>Encryption is the same thing, it rotates each letter by a different distance, thus scrambling the message. You can only unscramble the message if you have a key that perfectly restores every letter in the message. This is called Advanced Encryption Standard, or AES for short.</p>
+<h3><a class="header" href="#public-private-key" id="public-private-key">Public Private Key</a></h3>
+<p>It is easy to confuse encryption keys and public/private keys. One is like a door knob, you need a key to both lock and unlock it. While public/private keys are like a padlock, the public key can close the lock but only the private key can open it.</p>
+<p>This becomes useful when we want to have a private conversation. Alice and Bob exchange padlocks. Now Alice can write a message that only Bob can open. When Bob replies to Alice, he uses her padlock so only she can open his message.</p>
+<p>Simple enough, but what if we want to have a group conversation? Alice creates 4 copies of an encryption key, which will let everybody in the group both lock and unlock. She now can invite Bob, Carl, and Dave to the group by sending them the key by using their individual padlocks.</p>
+<p>Once everybody has the same shared key, they can now write and lock a message to the group that only the group can see. Allowing everybody to pass messages around. </p>
+<h2><a class="header" href="#gundb-sea-api-implementation-in-pfalfa-identity-hub-service" id="gundb-sea-api-implementation-in-pfalfa-identity-hub-service">GunDB SEA API Implementation in Pfalfa Identity Hub Service</a></h2>
+<blockquote>
+<p>We're using GunDB SEA API as a based in our Identity Hub Services. Pfalfa Platform provide easy to use REST API to connect with our Identity Hub Services which dApps developer can use to manage their user base with simple integration and abstraction.</p>
+</blockquote>
+<blockquote>
+<p>Our Identity Hub Service also provide additional user profile information which can be fetched using public key whenever required. Please consult our Identity Hub Developer Documentation for integration guideline.</p>
+</blockquote>
+<h1><a class="header" href="#database-service" id="database-service">Database Service</a></h1>
+<p>Traditional database systems are normally managed and maintained by single institutions which possess the supreme authorities over the whole database. This model is not fitting for data management between institutions where a mutual trust has not been really developed, which stands out particularly in the internet application environment.</p>
+<p>Pfalfa database service has different approach, utilizing <a href="https://gun.eco/">GunDB</a> which offer decentralized, peer-to-peer and offline first approach there is no single centralized server. Pfalfa will provide relay peers in multiple network one that may have more reliable resources than a browser.</p>
+<h2><a class="header" href="#technology-1" id="technology-1">Technology</a></h2>
+<h3><a class="header" href="#what-is-decentralized-database" id="what-is-decentralized-database">What is Decentralized Database</a></h3>
+<blockquote>
+<p>Decentralized databases means that no single server control the data, it sync across every node in this case, every user browser acted as peer node that sync each other automatically. </p>
+</blockquote>
+<p>And it means that all the data is distributed between the nodes of the network. If something is added, edited or deleted on any computer, it will be reflected in all the computers of the network. If there are some legal amendments accepted, new information will be spread among other users throughout the network. Otherwise, the data will be backed up to coincide with the other nodes. Thus, the system is self-sufficient and self-regulating. The databases are protected from deliberate attacks or accidental changes of information.</p>
+<h3><a class="header" href="#reliability-accessibility-and-data-transfer-rates" id="reliability-accessibility-and-data-transfer-rates">Reliability, accessibility and data transfer rates</a></h3>
+<blockquote>
+<p>Decentralized networks can withstand the significant pressure on the network.</p>
+</blockquote>
+<p>All the nodes of the network have the data. So, the requests are distributed between the nodes. Therefore, the pressure doesn’t fall on one computer, but on all the network. In this case, the total capacity of the network is much larger than the centralized one has.</p>
+<p>Since the number of computers in the decentralized or distributed network is large, DDoS attacks are possible only in case their capacity is much larger than that of the network. But that would be a very expensive attack. In a centralized model the response time is very in this case. Therefore, it can be considered that decentralized and distributed networks are safe.</p>
+<p>The users might be located all over the world, and don't forget about possible Internet connection issues. In decentralized and distributed networks the client can choose the node and work with all required information.</p>
+<h3><a class="header" href="#scalability" id="scalability">Scalability</a></h3>
+<blockquote>
+<p>A centralized network cannot expand significantly.</p>
+</blockquote>
+<p>In a centralized model, all the clients are connected to the server. Only the server stores all the data. Therefore, all requests about receiving, changing, adding or removing the data passes through the main computer. But the server resources are finite. Consequently, it is able to carry out its work effectively only for the specific number of participants. If the number of clients is larger, the server load may exceed the limit during the peak time. Decentralized and distributed models don't have this problem since the load is shared between several computers.</p>
+<h3><a class="header" href="#offline-first" id="offline-first">Offline-First</a></h3>
+<p>When a browser peer asks for data, it'll merge the reply with its own data using a CRDT, then cache the result. This means that:</p>
+<blockquote>
+<p>The next time the browser asks for that data, the reply is instant, even when offline.
+Data is replicated on each browser that asked for it.
+If your server fails, you can still recover your data from the browsers.</p>
+</blockquote>
+<p>This makes the loss of important information nearly impossible, as all copies of the data would need to be destroyed before it is lost.</p>
+<h2><a class="header" href="#gundb-implementation-in-pfalfa-database-service" id="gundb-implementation-in-pfalfa-database-service">GunDB Implementation in Pfalfa Database Service</a></h2>
+<blockquote>
+<p>Pfalfa platform provide dedicated GunDB master peer relay for each dApps. Each peer will be hosted in multiple cloud provider in multiple data center. Once dApps initiated from our Developer Dashboard, our GunDB Peer will automatically provisioning to serve dApps database requirement.</p>
+</blockquote>
+<h1><a class="header" href="#storage-service" id="storage-service">Storage Service</a></h1>
+<p>Pfalfa provide easy-to-use storage service for dApps on top of IPFS. Pfalfa also provide multiple IPFS gateway in multiple network which make it easy for developer to host dApps under IPFS distributed content.</p>
+<h2><a class="header" href="#technology-2" id="technology-2">Technology</a></h2>
+<h3><a class="header" href="#what-is-decentralized-storage" id="what-is-decentralized-storage">What is Decentralized storage</a></h3>
+<blockquote>
+<p>Decentralized storage means no single server acted as server, it's distributed equally using P2P technology accross every node. Instead of a central server, a peer to peer network is used to establish connections. Public key cryptography is built into the node addressing system and content addressing is used to index content. </p>
+</blockquote>
+<h3><a class="header" href="#interplanetary-file-system-ipfs" id="interplanetary-file-system-ipfs">Interplanetary File System (IPFS)</a></h3>
+<p>IPFS is a new system for storing data on a large number of computers. It is transport layer agnostic, meaning that it can communicate through transport layers like transmission control protocol (TCP), uTP, UDT, QUIC, TOR, and even Bluetooth) </p>
+<h3><a class="header" href="#node-addressing-and-connection-security" id="node-addressing-and-connection-security">Node addressing and connection security</a></h3>
+<ul>
+<li>Nodes in the peer to peer network each hold private keys and release public keys, just like in Bitcoin or Ethereum.</li>
+<li>Node addresses are derived through hashing their public keys. Allowing connection verification through message signing.</li>
+<li>Their public keys can be used to encrypt data before it is transferred, preventing interception and theft.</li>
+</ul>
+<p>Solutions to the security issues of today's web are built into this addressing system. There is no need for a trusted central certificate issuer to provide connection verification tools and all connections can easily be encrypted by default. No more SSL.</p>
+<p>At its core, IPFS is a versioned file system that can take files and manage them and also store them somewhere and then tracks versions over time. IPFS also accounts for how those files move across the network so it is also a distributed file system.</p>
+<p>IPFS has rules as to how data and content move around on the network that are similar in nature to bittorrent. This file system layer offers very interesting properties such as:</p>
+<ul>
+<li>websites that are completely distributed</li>
+<li>websites that have no origin server</li>
+<li>websites that can run entirely on client side browsers</li>
+<li>websites that do not have any servers to talk to</li>
+</ul>
+<h3><a class="header" href="#http-vs-ipfs" id="http-vs-ipfs">HTTP VS IPFS</a></h3>
+<p>HTTP has a nice property where in the identifier is the location so it is easy to find the computers hosting the file and talk to them. This is useful and generally works very well but not in the offline case or in large distributed scenarios where you want to minimize load across the network.</p>
+<p>In IPFS you separate the steps into two parts:</p>
+<ul>
+<li>Identify the file with content addressing</li>
+<li>Go and find it — when you have the hash then you ask the network you’re connected to 'who has this content? (hash)' and you connect to the corresponding nodes and download it.</li>
+</ul>
+<p>The result is a peer to peer overlay that gives you very fast routing</p>
+<h3><a class="header" href="#content-addressing" id="content-addressing">Content Addressing</a></h3>
+<p>A content address is derived by hashing a piece of content.</p>
+<ul>
+<li>That content address is then hashed again to derive a key name.</li>
+<li>The key name is associated with a human readable name in IPNS (IPFS’ address registry).</li>
+</ul>
+<p>Instead of referring to objects (pictures, articles, videos) by which server they are stored on, IPFS refers to everything by the hash on the file. The idea is that if in your browser you want to access a particular page then IPFS will ask the entire network &quot;does anyone have this file that corresponds to this hash?&quot; and a node on IPFS that does can return the file allowing you to access it.</p>
+<p>IPFS uses content addressing at the HTTP layer. This is the practice of saying instead of creating an identifier that addresses things by location, we're going to address it by some representation of the content itself. This means that the content is going to determine the address. The mechanism is to take a file, hash it cryptographically so you end up with a very small and secure representation of the file which ensures that someone can not just come up with another file that has the same hash and use that as the address. The address of a file in IPFS usually starts with a hash that identifies some root object and then a path walking down. Instead of a server, you are talking to a specific object and then you are looking at a path within that object.</p>
+<p>In today's web, if a file is moved, all links to that file need to be updated if they are to resolve. Because IPFS addresses are derived from the content they refer to, if the content still exists anywhere on the network, links will always resolve. This removes any need for duplication of content, except for the purposes of greater persistence security or for scaling up serving capabilities.</p>
+<h2><a class="header" href="#ipfs-implementation-in-storage-service" id="ipfs-implementation-in-storage-service">IPFS Implementation in Storage Service</a></h2>
+<blockquote>
+<p>Pfalfa Platform will manage multiple IPFS gateway using IPFS cluster to maximize data redundancy anda availability to already decentralized storage accross IPFS. Using our CLI tool, developer can easily deploy dApps to our IPFS gateway which automatically pin and publish under IPNS. We also provide sub-domain to link between IPFS CID and your dApps domain. Please consult our Developer Documentation for more information.</p>
+</blockquote>
+<h1><a class="header" href="#alfa-gold" id="alfa-gold">Alfa Gold</a></h1>
+<p>Alfa gold as crypto assets is a stable coin (relative to the price of gold) build on top of Parity Substrate Framework. 1 Alfa Gold equal to 1 gram of gold.</p>
+<p>On the Platform Alfa, Alfa Gold has utility as an asset needed to access technology features and services in the Pfalfa ecosystem. For example, DApps developers will need Alfa Gold to deploy smart contracts, conduct data transactions, etc. DApps users will need the Alfa Gold to be able to enter and access the application services. A tiny fraction of total amount of Alfa Gold spent by users of Pfalfa ecosystem is then accepted by those who maintain the operation of the Pfalfa blockchain (Miner and Provider) in the form of transaction fee. Alfa Gold would become the main medium of exchange for goods and services on Pfalfa Ecosystem. Besides that, public could also use it as a liquid store of value and quick peer to peer cash system.</p>
+<h2><a class="header" href="#technology-3" id="technology-3">Technology</a></h2>
+<h3><a class="header" href="#parity-substrate-1" id="parity-substrate-1">Parity Substrate</a></h3>
+<blockquote>
+<p>Alfa Gold was built on top of Parity Substrate, but what exactly Parity Substrate ? Essentially it's similar to any other framework like web framework, but for building distributed or decentralised systems such as cryptocurrencies. </p>
+</blockquote>
+<p>Here's key features of what Substrate offers</p>
+<h3><a class="header" href="#blockchain-as-persistent-storage" id="blockchain-as-persistent-storage">Blockchain as persistent storage</a></h3>
+<p>The sole purpose of any blockchain is to provide a way to store and mutate data in a verifiable and globally persistent way, meaning that all parties have a zero-trust way to check and agree on what values should be considered actual in any point in time. Moreover, once such data is sealed, it should be persistent, and depending on the consensus, impossible to modify it.</p>
+<p>This property is widely used in cryptocurrencies where persistent storage contains account keys and their actual balances. However, it should be noted that cryptocurrency is not the only possible blockchain application. Basically, almost every system that requires globally coherent, persistent storage and verifiable transaction history may be implemented using a blockchain in one way or another.</p>
+<p>Substrate provides efficient storage that is very easy to use and that is tightly integrated with the WebAssembly (Wasm) runtime.</p>
+<h3><a class="header" href="#blockchain-as-a-function" id="blockchain-as-a-function">Blockchain as a function</a></h3>
+<p>In order to update the chain state and alter its storage according to pending operations, we need to have a point where decisions are made.</p>
+<p>Such decision points may be expressed as a function that takes current state and a set of pending operations and yields another state that should be considered the new actual state of the chain. In the blockchain world, such a function is called the state transition function, or STF for short.</p>
+<p>Substrate lets you define such a function in a very manageable and portable way. Much like JavaScript that’s executed on a web page, you may write a set of functions collectively called runtime, that would act as a STF. Additionally, such an implementation would be portable and would not depend on processor architecture, operating system, browser, or be in any other way platform-dependent.</p>
+<h3><a class="header" href="#safety-and-speed" id="safety-and-speed">Safety and speed</a></h3>
+<p>One of the most revolutionary parts of Substrate is that the runtime image containing the STF is stored, among other payload, right on the chain. That means that runtime and the whole chain’s business logic may be updated in a secure and verifiable way. Even more, since both Substrate and its Runtime Module Library³ are written in Rust programming language, they can be translated to both native code and Wasm.</p>
+<p>At any point in time, client software has two copies of the compiled runtime: one that's compiled in the software natively, and one that is a Wasm image to be executed in a VM. When executing runtime functions, the client software checks whether the on-chain Wasm version of the runtime matches its compiled-to-native, built-in version. When it does, the client software then delegates execution of the runtime functions to the native code version.</p>
+<h3><a class="header" href="#forkless-upgrades" id="forkless-upgrades">Forkless upgrades</a></h3>
+<p>When the runtime image gets updated on the chain, some clients will not have updated their software yet. In that case, their node would execute the correct version of the runtime by interpreting it on Substrate’s integrated Wasm virtual machine. So, in any case, all nodes on the network are always able to synchronise the chain correctly (albeit at different levels of efficiency), thus preventing a chain fork.</p>
+<h3><a class="header" href="#p2p-networking" id="p2p-networking">P2P Networking</a></h3>
+<p>Blockchain depends on having lots of participants communicating over a network. The typical solution is to use Peer-to-Peer technologies for such communication, and Substrate is not an exception here. P2P is a common name for a set of technologies used to create decentralized networking applications.</p>
+<p>The main idea is to have a self-sustaining network environment where every participant (usually called a node) is capable of operating within a network without any prior configuration or interaction with an authority.</p>
+<p>To ensure that nodes can join or leave the network at any time without affecting overall network connectivity, Substrate uses the Rust implementation of libp2p, a promising network stack that has everything needed to set up a decentralized network environment.</p>
+<h3><a class="header" href="#consensus" id="consensus">Consensus</a></h3>
+<p>Having a state transition function that allows you to move from one state to another is good, but not enough. You also need a way for all nodes to agree on what the next state should be.</p>
+<p>As an owner of a bank account, the last thing you want is to have a situation wherein you and your bank disagree on the amount of money you have in your account. Blockchain allows parties to reach consensus without trusting each other (hence zero-trust), even in presence of malicious participants who are actively trying to break the system and steal your money.</p>
+<p>This is done using a consensus algorithm with a property called Byzantine Fault Tolerance (BFT). If a system is BFT, it means that the nodes can reach consensus even if some fraction of them behave arbitrarily badly, including collusion, withholding messages, and being offline. BFT consensus systems achieve resistance against varying degrees of networking issues, where messages can be reordered or delayed. Some BFT consensus systems are designed such that when nodes misbehave (e.g. voting for two blocks at a time), they can be punished and have stake slashed on-chain.</p>
+<p>For every consensus engine supported in Substrate, there will be a runtime module designed for handling proofs of misbehavior. The repercussions of evaluating a proof of misbehavior can be determined by the runtime.</p>
+<p>It was mathematically proven that this protocol is viable as long as two thirds of the nodes in the network are not malicious and operate according to the protocol. This is one of the reasons why it is important to have a lot of nodes in the network.</p>
+<p>Consensus is a critical part of any blockchain application. Luckily, Substrate provides an existing implementation of BFT consensus that can be used almost out of the box.</p>
+<h3><a class="header" href="#light-client-support" id="light-client-support">Light Client Support</a></h3>
+<p>Full clients, also known as full nodes, are important for chain security. But as the blockchain grows, the client's database becomes larger and larger. Currently, mainstream cryptocurrencies have databases of several hundreds of gigabytes.</p>
+<p>When the full node is initialized, the first thing it needs to do is to synchronize with the rest of the network. Due to security reasons, such a node could not just download the database from a random node &quot;as is.&quot; Instead, it needs to build its own database from scratch by replaying all transactions since genesis (the very first block of the chain). In addition to being computationally expensive, this task requires huge amount of data to be transferred across the network.</p>
+<p>I think everyone would agree that downloading half of a terabyte of data to your mobile phone only to buy a sandwich is… impractical if not ridiculous. That's why, almost right from the start, blockchain developers started to think about a way to reduce the costs of maintaining the node, both in storage space and in network throughput.</p>
+<p>In the end, the light client concept was born. In a nutshell, a light client is an operating mode of a blockchain node where only the most important data is stored locally and network interaction is reduced to a bare minimum while retaining an acceptable amount of security for almost all interactions anyone is likely to make.</p>
+<h1><a class="header" href="#project-timeline" id="project-timeline">Project Timeline</a></h1>
+<ul>
+<li>October 2019 - Project initial launch</li>
+<li>October 2019 to MAY 2020 - Private sale, Initial Development, Token listing on P2P, B2B</li>
+<li>June 2020 - Community building, Public Sale, Phase 2 tech development Begin</li>
+<li>July 2020 - Initial exchange offering</li>
+<li>August 2020 - Private launch, Beta testing, International marketing started</li>
+<li>September 2020 - Nodes onboarding, Public launch, IEO 2</li>
+<li>October 2020 - Dapps onboarding, Market development</li>
+<li>November 2020 - Market Expansion</li>
+</ul>
+<h1><a class="header" href="#legal-notice" id="legal-notice">Legal Notice</a></h1>
+<p>KINDLY READ THROUGH THIS SECTION AND ALL THE PRECEDING SECTIONS CAUTIOUSLY. IF YOU’RE IN ANY DOUBT AS TO THE ACTION TO TAKE, WE ADVISE THAT YOU CONSULT YOUR LEGAL, FINANCIAL, OR OTHER PROFESSIONAL ADVISOR(S).</p>
+<p>This whitepaper is an invitation or inducement to engage in any investment activity nor form portion of any advice to sell, or any solicitation of an offer, by Pfalfa or any third party (as applicable, the “Distributor”) to purchase any Simple Agreement for Pfalfa Tokens or tokens of Pfalfa (collectively with any “tokens” or “Pfalfa tokens”), nor shall it or any portion of it, nor the fact of its presentation, form the basis of, or be depended upon in line with, any contract or investment decision.</p>
+<p>No one is bound to enter into any contract or binding legal commitment regarding the sale and purchase of the tokens, and no cryptocurrency or other means of payment is to be accepted, on the basis of only this whitepaper. Any agreement, private placement memorandum, between the Distributor and you regarding any sale and purchase of Pfalfa tokens is to be governed only by separate documents, such as a Pfalfa token sale agreement, private placement memorandum, and other applicable written terms and conditions, setting out the terms and conditions of such agreement (collectively, the “Agreement”).</p>
+<p>In the case of any inconsistencies between the terms in the Agreement and in this whitepaper, the terms in the Agreement shall dominate.</p>
+<p>Without any prejudice to any other limitations stated in the Agreement, you're not eligible and you're not to purchase any Pfalfa tokens if you're a citizen or resident (tax or otherwise) of any jurisdiction in which the offer and sale of the Pfalfa tokens is prohibited.</p>
+<p>No regulatory body has reviewed or approved of any of the information in this whitepaper. No such action has been or will be done under the laws, regulatory requirements or rules of any jurisdiction. The publication or distribution of this whitepaper doesn't imply that the applicable laws, regulations or rules have been complied with.</p>
+<p>This whitepaper, any portion thereof and any copy thereof must not be done or conveyed to any country where the distribution of this whitepaper is forbidden or restricted. No portion of this whitepaper is to be reproduced or distributed without including this section.</p>
+<h3><a class="header" href="#cautionary-note-on-forward-looking-statements" id="cautionary-note-on-forward-looking-statements">Cautionary Note on Forward-Looking Statements</a></h3>
+<p>All statements in this whitepaper, statements made in press releases or in anywhere that's accessible by the public and oral statements that might have been made by Pfalfa or its directors, executive officers, employees or agents, that are not statements of historical fact, are simply “forward-looking statements”. Some of such statements can be recognized by forward-looking terms such as “aim”, &quot;anticipate&quot;, “can”, “intend,” “focus,” “target”, “believe”, “could”, &quot;plan&quot;, “estimate”, “expect”, “if”, “intend”, “may”, “possible”, “probable”, “project”, “should”, “would”, or other related terms. Nevertheless, such terms are not the exclusive means of recognizing forward-looking statements. All statements concerning the Pfalfa’s financial position, business strategies, plans and prospects as well as the future prospects of the industry which Pfalfa is in are forward-looking statements. These forward-looking statements, including with no limitation to statements as to the Pfalfa’s prospects, future plans, other projected industry trends and other matters discussed in this whitepaper regarding Pfalfa are matters that are not historic facts, but only possible predictions.</p>
+<p>These forward-looking statements may involve known and unknown risks, uncertainties and other factors that may cause the actual future results, performance or achievements Pfalfa to be materially different from any future results, performance or achievements projected, expressed or implied by such forward-looking statements. These factors may include, with no limitation to:</p>
+<p>(a) possible changes in economic, political, social, and stock or cryptocurrency market conditions, and the regulatory environment in the countries in which Pfalfa may conduct its respective businesses and operations;</p>
+<p>(b) the risk that Pfalfa may be unable to execute or implement its business strategy and future plans;</p>
+<p>(c) possible changes in interest rates and exchange rates of fiat currencies and cryptocurrencies; (d) possible changes in the anticipated growth strategies and expected internal growth of Pfalfa;</p>
+<p>(e) possible changes in the availability and fees payable to Pfalfa in connection with its business and operations;</p>
+<p>(f) possible changes in the availability and/or salaries of employees who are required for Pfalfa to operate its business and operations;</p>
+<p>(g) possible changes in preferences of potential customers of Pfalfa;</p>
+<p>(h) possible changes in competitive conditions under which Pfalfa operate, and in the ability of Pfalfa to compete under such conditions;</p>
+<p>(i) possible changes in the future capital needs of Pfalfa and the availability of financing and capital to fund such needs;</p>
+<p>(j) possible war or acts of international or domestic terrorism;</p>
+<p>(k) possible occurrences of catastrophic events, natural disasters and “acts of God” that affect the businesses and/or operations of Pfalfa;</p>
+<p>(l) possible other factors that may be beyond the control of Pfalfa; and</p>
+<p>(m) any other possible risks and uncertainties associated with Pfalfa and its business and operations, Pfalfa tokens and the sale of Pfalfa tokens.</p>
+<p>All forward-looking statements made by or attributable to Pfalfa or persons who may be acting on behalf of Pfalfa are expressly qualified in their entirety by such factors. Given that risks and uncertainties that may cause the actual future results, performance or achievements of Pfalfa to be materially different from that expected, expressed or implied by the forward-looking statements in this whitepaper, undue reliance must not be placed on these statements. These forward-looking statements are applicable only as of the date of this whitepaper.</p>
+<p>Neither Pfalfa nor any other person represents, warrants and/or undertakes that the actual future results, performance or achievements of Pfalfa will be as discussed in those forward-looking statements. The actual results, performance or achievements of Pfalfa may differ materially from those anticipated in such forward-looking statements. Nothing in this whitepaper is or may be depended upon as a promise, representation or undertaking as to the future performance or/and policies of Pfalfa. Further, Pfalfa disclaims any responsibility to update any of the forward-looking statements or publicly announce any revisions to the forward-looking statements to reflect any future developments, events or circumstances, even if new information may become available or other events occur in the future.</p>
+<h3><a class="header" href="#risks-and-uncertainties" id="risks-and-uncertainties">Risks and Uncertainties</a></h3>
+<p>Prospective purchasers of Pfalfa tokens (as referred to in this whitepaper) should carefully consider and evaluate all potential risks and uncertainties associated with Pfalfa and its businesses and operations, Pfalfa tokens and the sale of Pfalfa tokens, and all potential risks, uncertainties and other information set out in this whitepaper, prior to any potential purchase of Pfalfa tokens. If any of such risks and uncertainties occurs into actual events, the business, financial condition, results of operations and prospects of Pfalfa could be materially and negatively affected. In such cases, you may lose all or a part of the value of Pfalfa tokens. For any assistance on the assessment of such risks, you should consult your legal, financial, or other professional advisors.</p>
+<h3><a class="header" href="#market-and-industry-information-and-no-consent-of-other-persons" id="market-and-industry-information-and-no-consent-of-other-persons">Market and Industry Information and No Consent of Other Persons</a></h3>
+<p>This whitepaper contains market and industry information and forecasts that may have been acquired from internal surveys, reports and studies, where necessary, as well as market research, publicly available information and industry publications. These surveys, reports, studies, market research, publicly available information and publications in general may state that the information that they contain has been acquired from sources believed to be reliable, but there can be no assurance as to the correctness or completeness of such included information.
+Except for Pfalfa and its directors, officers and employees, no one has provided his or her consent to the inclusion of his or her name and/or other information attributed or perceived to be attributed to such a person in line therewith in this whitepaper and no representation, warranty or undertaking is or purported to be offered as to the correctness or completeness of such information by such person and such persons shall not be obliged to give any updates on the same.</p>
+<p>While Pfalfa may have taken reasonable actions to ensure that the information is acquired accurately and in its proper context, it has not conducted any independent review of any information derived from third party sources, verified the correctness or completeness of such information or ascertained the underlying economic assumptions relied upon therein. Consequently, neither Pfalfa, nor its directors, officers and employees acting on its behalf makes any form of representation or warranty as to the correctness or completeness of such information and shall not be obligated to give any updates on the same.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
